@@ -1,0 +1,12 @@
+[Unit]
+Description=IoT simulated node
+After=mosquitto.service network.target
+
+[Service]
+User=manojamr2005
+WorkingDirectory=/home/manojamr2005/iot-hub
+ExecStart=/home/manojamr2005/iot-hub/venv/bin/python node_sim.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

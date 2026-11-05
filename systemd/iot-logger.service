@@ -1,0 +1,12 @@
+[Unit]
+Description=IoT MQTT logger
+After=mosquitto.service network.target
+
+[Service]
+User=manojamr2005
+WorkingDirectory=/home/manojamr2005/iot-hub
+ExecStart=/home/manojamr2005/iot-hub/venv/bin/python logger.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
